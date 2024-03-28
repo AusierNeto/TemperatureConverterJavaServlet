@@ -68,4 +68,22 @@
     nbproject/build-impl.xml file. 
 
     -->
+
+<!-- Define o caminho das dependências -->
+<path id="classpath">
+    <fileset dir="C:\Users\arles\OneDrive\Documentos\NetBeansProjects\selenium-java-4.18.1\lib"> <!-- Diretório onde estão as bibliotecas do Selenium -->
+        <include name="*.jar"/> <!-- Inclui todos os arquivos .jar no diretório lib -->
+    </fileset>
+</path>
+
+<!-- Compilação do projeto -->
+<target name="-pre-compile">
+    <pathconvert property="javac.classpath" refid="classpath"/> <!-- Converte o caminho das dependências para ser usado na compilação -->
+</target>
+
+<!-- Execução do projeto -->
+<target name="-run-deploy" depends="run">
+    <pathconvert property="run.classpath" refid="classpath"/> <!-- Converte o caminho das dependências para ser usado na execução -->
+</target>
+
 </project>
