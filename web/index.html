@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Temperature Converter</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Temperature Conversion</h1>
+        <div>
+            <form action="conversion">
+                <label>Input temperature value and type for conversion</label>
+                <br><br>
+                <input id="value" name="value" type="text" placeholder="Temperature value"/>
+                <select id="temperature" name="temperature" >
+                    <option value="CelsiusToFahrenheit">Celsius to Fahrenheit</option>
+                    <option value="FahrenheitToCelsius">Fahrenheit to Celsius</option>
+                </select>
+                
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+    </body>
+</html>
